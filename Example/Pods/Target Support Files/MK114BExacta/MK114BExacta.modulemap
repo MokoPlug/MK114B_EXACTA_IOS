@@ -1,0 +1,6 @@
+framework module MK114BExacta {
+  umbrella header "MK114BExacta-umbrella.h"
+
+  export *
+  module * { export * }
+}

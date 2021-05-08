@@ -1,0 +1,346 @@
+{
+  "name": "MK114BExacta",
+  "version": "0.1.0",
+  "summary": "A short description of MK114BExacta.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/aadyx2007@163.com/MK114BExacta",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "aadyx2007@163.com": "aadyx2007@163.com"
+  },
+  "source": {
+    "git": "https://github.com/aadyx2007@163.com/MK114BExacta.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "resource_bundles": {
+    "MK114BExacta": [
+      "MK114BExacta/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "CTMediator": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "ApplicationModule",
+      "source_files": "MK114BExacta/Classes/ApplicationModule/**",
+      "dependencies": {
+        "MKBaseModuleLibrary": [
+
+        ]
+      }
+    },
+    {
+      "name": "CTMediator",
+      "source_files": "MK114BExacta/Classes/CTMediator/**"
+    },
+    {
+      "name": "SDK-BML",
+      "source_files": "MK114BExacta/Classes/SDK-BML/**",
+      "dependencies": {
+        "MKBaseBleModule": [
+
+        ]
+      }
+    },
+    {
+      "name": "Target",
+      "source_files": "MK114BExacta/Classes/Target/**",
+      "dependencies": {
+        "MK114BExacta/Functions": [
+
+        ]
+      }
+    },
+    {
+      "name": "Functions",
+      "dependencies": {
+        "MK114BExacta/SDK-BML": [
+
+        ],
+        "MK114BExacta/CTMediator": [
+
+        ],
+        "MKBaseModuleLibrary": [
+
+        ],
+        "MKCustomUIModule": [
+
+        ],
+        "HHTransition": [
+
+        ],
+        "MLInputDodger": [
+
+        ]
+      },
+      "subspecs": [
+        {
+          "name": "AboutPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/AboutPage/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/AboutPage/Model": [
+
+                ],
+                "MK114BExacta/Functions/AboutPage/View": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MK114BExacta/Classes/Functions/AboutPage/Model/**"
+            },
+            {
+              "name": "View",
+              "source_files": "MK114BExacta/Classes/Functions/AboutPage/View/**",
+              "dependencies": {
+                "MK114BExacta/Functions/AboutPage/Model": [
+
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DeviceInfo",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/DeviceInfo/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/DeviceInfo/Model": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MK114BExacta/Classes/Functions/DeviceInfo/Model/**"
+            }
+          ]
+        },
+        {
+          "name": "EnergyPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/EnergyPage/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/EnergyPage/Model": [
+
+                ],
+                "MK114BExacta/Functions/EnergyPage/View": [
+
+                ],
+                "MK114BExacta/Functions/DeviceInfo/Controller": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MK114BExacta/Classes/Functions/EnergyPage/Model/**"
+            },
+            {
+              "name": "View",
+              "source_files": "MK114BExacta/Classes/Functions/EnergyPage/View/**"
+            }
+          ]
+        },
+        {
+          "name": "ModifyDataPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/ModifyDataPage/Controller/**"
+            }
+          ]
+        },
+        {
+          "name": "ModifyPowerStatusPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/ModifyPowerStatusPage/Controller/**"
+            }
+          ]
+        },
+        {
+          "name": "PowerPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/PowerPage/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/PowerPage/Model": [
+
+                ],
+                "MK114BExacta/Functions/PowerPage/View": [
+
+                ],
+                "MK114BExacta/Functions/DeviceInfo/Controller": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MK114BExacta/Classes/Functions/PowerPage/Model/**"
+            },
+            {
+              "name": "View",
+              "source_files": "MK114BExacta/Classes/Functions/PowerPage/View/**"
+            }
+          ]
+        },
+        {
+          "name": "ScanPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/ScanPage/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/ScanPage/View": [
+
+                ],
+                "MK114BExacta/Functions/AboutPage/Controller": [
+
+                ],
+                "MK114BExacta/Functions/TabBarPage/Controller": [
+
+                ]
+              }
+            },
+            {
+              "name": "View",
+              "source_files": "MK114BExacta/Classes/Functions/ScanPage/View/**"
+            }
+          ]
+        },
+        {
+          "name": "SettingPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/SettingPage/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/SettingPage/Model": [
+
+                ],
+                "MK114BExacta/Functions/SettingPage/View": [
+
+                ],
+                "MK114BExacta/Functions/DeviceInfo/Controller": [
+
+                ],
+                "MK114BExacta/Functions/ModifyDataPage/Controller": [
+
+                ],
+                "MK114BExacta/Functions/ModifyPowerStatusPage/Controller": [
+
+                ],
+                "MK114BExacta/Functions/UpdatePage/Controller": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MK114BExacta/Classes/Functions/SettingPage/Model/**"
+            },
+            {
+              "name": "View",
+              "source_files": "MK114BExacta/Classes/Functions/SettingPage/View/**"
+            }
+          ]
+        },
+        {
+          "name": "TabBarPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/TabBarPage/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/PowerPage/Controller": [
+
+                ],
+                "MK114BExacta/Functions/EnergyPage/Controller": [
+
+                ],
+                "MK114BExacta/Functions/TimerPage/Controller": [
+
+                ],
+                "MK114BExacta/Functions/SettingPage/Controller": [
+
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "TimerPage",
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/TimerPage/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/TimerPage/Model": [
+
+                ],
+                "MK114BExacta/Functions/TimerPage/View": [
+
+                ],
+                "MK114BExacta/Functions/DeviceInfo/Controller": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MK114BExacta/Classes/Functions/TimerPage/Model/**"
+            },
+            {
+              "name": "View",
+              "source_files": "MK114BExacta/Classes/Functions/TimerPage/View/**"
+            }
+          ]
+        },
+        {
+          "name": "UpdatePage",
+          "dependencies": {
+            "iOSDFULibrary": [
+
+            ]
+          },
+          "subspecs": [
+            {
+              "name": "Controller",
+              "source_files": "MK114BExacta/Classes/Functions/UpdatePage/Controller/**",
+              "dependencies": {
+                "MK114BExacta/Functions/UpdatePage/Model": [
+
+                ]
+              }
+            },
+            {
+              "name": "Model",
+              "source_files": "MK114BExacta/Classes/Functions/UpdatePage/Model/**"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
